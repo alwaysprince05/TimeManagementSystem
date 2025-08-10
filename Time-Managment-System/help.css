@@ -1,0 +1,109 @@
+/* Dark Mode Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #181818; /* Dark background */
+    color: #ddd; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+.help-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #2d2d2d; /* Darker background for container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #ff7b54; /* Accent color */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #bbb; /* Light gray text */
+}
+
+.faq-section h2,
+.contact-section h2 {
+    color: #ff7b54; /* Accent color */
+    border-bottom: 2px solid #ff7b54;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 5px;
+    background: #333; /* Dark background for each FAQ */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: #444; /* Lighter background on hover */
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question strong {
+    font-size: 1.1em;
+    color: #fff; /* White text for questions */
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ccc; /* Light text for answers */
+}
+
+.faq-gif {
+    max-width: 100px; /* Increased width for real-life style GIF */
+    height: auto;
+    margin-left: 10px;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 1em;
+    color: #bbb; /* Light gray for contact info */
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button,
+.about-link {
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff; /* White text for buttons */
+    background: #ff7b54; /* Accent color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover,
+.about-link:hover {
+    background: #ff5521; /* Lighter accent color on hover */
+}
+

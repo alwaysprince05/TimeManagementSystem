@@ -1,0 +1,231 @@
+/* Root Variables for Theme */
+:root {
+    --primary-color: #007bff; /* Main blue */
+    --secondary-color: #333;   /* Dark gray */
+    --accent-color: #ff6f61;   /* Accent red */
+    --light-bg: #eef2f3;       /* Light background */
+    --dark-bg: #333;           /* Dark background */
+    --font-family: 'Roboto', sans-serif;
+    --border-radius: 10px;
+    --transition-speed: 0.3s;
+    --max-width: 1200px;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-bg);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    /* background-color: rgb(90, 87, 87); */
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline-block;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+    font-weight: 500;
+}
+
+.navbar-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(45deg, #2196f3, #03a9f4); /* Blue gradient */
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+}
+
+/* Title Section */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #f8f8f8;
+}
+
+.mission-section p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #fafafa;
+    padding: 80px 0;
+}
+
+.features-section .feature {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.features-section .feature-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform var(--transition-speed);
+}
+
+.features-section .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-section .feature-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.features-section .feature-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer .footer-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+}
+
+footer .footer-link:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-links {
+        margin-top: 15px;
+        display: block;
+    }
+
+    .features-section .feature {
+        justify-content: center;
+    }
+
+    .features-section .feature-card {
+        width: 80%;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+

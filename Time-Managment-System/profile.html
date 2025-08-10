@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+        <p id="profilename">Name: name</p>
+        <p id="profileEmail">Email: user@example.com</p>
+        <button id="editProfileButton">Edit Profile</button>
+        <br/>
+        <br/>
+        <a href="landing.html"><button class="back-button">Back </button></a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup" id="popup">
+        <h3>Edit Profile</h3>
+        <label for="newName">Name:</label>
+        <input type="text" id="newName">
+        <label for="newEmail">Email:</label>
+        <input type="email" id="newEmail">
+        <div class="buttons">
+            <button class="save" id="saveButton">Save</button>
+            <button class="cancel" id="cancelButton">Cancel</button>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

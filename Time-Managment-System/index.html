@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Registration Page -->
+    <div id="registerPage" class="container active">
+        <h2>Create an Account</h2>
+        <div id="message" class="message"></div>
+        <input type="text" id="Name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Set a password" required>
+        <button type="button" id="togglePasswordButton">Show Password</button>
+        <button id="registerButton">Sign Up</button>
+        <div class="redirect">
+            <span>Already have an account? <a href="#" id="redirectToLogin">Log In</a></span>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="container">
+        <h2>Log In</h2>
+        <div id="loginMessage" class="message"></div>
+        <input type="email" id="loginemail" placeholder="Enter your email" required>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <button type="button" id="loginTogglePasswordButton">Show Password</button>
+        <button id="loginButton">Log In</button>
+        <div class="redirect">
+            <span>Don't have an account? <a href="#" id="redirectToRegister">Sign Up</a></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

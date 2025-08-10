@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1 id="welcomeMessage">Welcome to Your Time Management System</h1>
+        <div class="top-bar-right">
+            <div class="profile-icon-container">
+                <img src="image.png" alt="Profile Icon" id="profileIcon" class="profile-icon">
+                <div id="dropdownMenu" class="dropdown-menu hidden">
+                    <button class="dropdown-item" onclick="navigateTo('profile.html')">Profile</button>
+                    <button class="dropdown-item" onclick="navigateTo('help.html')">Help</button>
+                    <button class="dropdown-item" onclick="navigateTo('abt.html')">About Us</button>
+                    <button class="dropdown-item" id="signOutButton">Sign Out</button>
+                </div>
+            </div>
+            <!-- Pop-up Modal -->
+            <div id="popup" class="popup-overlay hidden">
+                <div class="popup-content">
+                    <h2>Profile</h2>
+                    <button onclick="navigateTo('profile.html')">Go to Profile</button>
+                    <button onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <main class="content">
+            <div class="Search">
+                <h2>Search Tasks</h2>
+                <input 
+                  type="text" 
+                  id="searchBar" 
+                  class="search-bar" 
+                  placeholder="Search for a task..." 
+                  oninput="filterTasks()">
+            </div><br>
+            <div id="mainContent">
+                <h2>Your Tasks</h2>
+                <button id="addTaskButton">Add Task</button>
+                <!-- Other main content elements -->
+            </div>
+            <div id="taskPopup" class="popup-container">
+                <div class="popup-content">
+                    <span id="closePopup" class="close-button">&times;</span>
+                    <h2>Add New Task</h2>
+                    <form id="taskForm">
+                        <input type="text" id="taskInput" placeholder="Task Title" required>
+                        <input type="text" id="taskDescriptionInput" placeholder="Task Description" required>
+                        <input type="date" id="taskDueDate" required>
+                        <select id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button type="submit">Submit Task</button>
+                    </form>
+                </div>
+            </div>
+            
+            <ul id="taskList" class="task-list">
+
+                <li class="task-item">
+                    <div class ="task-item-content">
+                    <span class="task-label">Task Title</span>
+                    <div class="task-details">Due: 2024-12-31 | Priority: high</div>
+                    <div class="timer-display">00:15:30</div>
+    
+
+                    <button class="edit">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="done">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>
+
+                    
+            </ul>
+            
+        </main>
+    </div>    
+    <script src="landing.js"></script>
+</body>
+</html>
